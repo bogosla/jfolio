@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Admin - Bogosla</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/bogosla.min.css') }}">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+       <h3>ADMIN - you're not autorizhed</h3>
+       <table class="table style-b triped" style="font-size: 10px;">
+           <tr>
+               <th>Name</th>
+               <th>Email</th>
+               <th>Msg</th>
+           </tr>
+       {% if has %}
+       {% for i in has %}
+           <tr>
+               <td>{{ i['name'] }}</td>
+               <td>{{ i['email'] }}</td>
+               <td>{{ i['msg'] }}</td>
+           </tr>
+       {% endfor %}
+       {% endif %}
+       <table></table>
+   </body>
+</html>

@@ -1,0 +1,140 @@
+.blue{
+    background-color: deepskyblue;
+    border-radius: 8px;
+    padding: 6%;
+    min-height: 150px;
+    text-align: center;
+}
+.infos .img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+.infos .text .name{
+    font-size: 26px;
+    font-weight: bold;
+    font-family: cursive;
+}
+.text h4, .text p{
+    font-size: 15px;
+    font-weight: 500;
+    color: #ddd;
+    font-family: monospace;
+}
+em:nth-child(1){
+    font-weight:600;
+    text-shadow: 2px 2px 1px green,
+        2px 1px 2px #c3d;
+}
+em:nth-child(2){
+    font-weight:600;
+    text-shadow: 2px 2px 1px blue,
+        2px 1px 2px #ef0;
+}
+em:nth-child(3){
+    font-weight:600;
+    text-shadow: 2px 2px 1px yellow,
+        2px 1px 2px #efd;
+}
+.img, .name{display: inline-block;vertical-align: top;}
+.container{
+    padding: 70px 10px 0px 10px;
+}
+
+.about, .stuffs h3{
+    text-align: center;
+    font-family: monospace;
+    padding: 13px 0;
+}
+.about h3{
+    font-size: 14px;
+    margin: 4px;
+}
+.about a{
+    width: 140px;
+    margin: 12px auto;
+    color: #fff;
+}
+.stuff{
+    display: flex;
+    margin: auto;
+    width: 330px;
+    height: 350px;
+    flex-flow: column wrap;
+    align-items: center;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.stuff img{
+    border-radius: 12px;
+    width: 300px;
+    height: 320px;
+    margin: 10px;
+}
+caption{font-weight: 700;}
+form{
+    padding: 10px;
+}
+.contact{
+    text-align: center;
+    background-color: #fff;
+    margin-top: 40px;
+    padding: 14px 0;
+    border-radius: 5px;
+    box-shadow:2px 2px 2px #b5f,
+        2px 4px 5px #cec,
+        2px 2px 2px #333;
+    border: 2px solid #eee;
+}
+.footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #ddd;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    margin-top: 75px;
+}
+.alert{
+    width: 60%;
+    height: 40px;
+    position: fixed;
+    top: 64px;
+    left: 50px;
+    background-color: #7AEF8C;
+    border-radius: 4px 4px 1rem/2rem 8px;
+}
+.alert-btn{font-size: 22px;
+font-weight: bolder;
+cursor: pointer;
+color: #f00;
+}
+.alert-cont{
+    font-size: 14px;
+    font-style: italic;
+    color: #000;
+    padding: 10px;
+    float: left;
+}
+#check{
+    color: red;
+    display: none;
+}
+@media (min-width: 760px)
+{
+    .stuff {
+        width: 100%;
+        margin: auto;
+        height: 500px;
+        flex-flow: row nowrap;
+        justify-content: stretch;  
+    }
+    .stuff img{
+        width: 450px;
+        height: 470px;
+        margin: 12px;
+    }
+}

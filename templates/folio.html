@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Untitled</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href=" {{ url_for('static', filename='css/bogosla.min.css') }}">
+      <link rel="stylesheet" href=" {{ url_for('static', filename='css/style.css') }}">
+   </head>
+   <body>
+      <div class="container">
+          <div class="blue">
+              <header class="nav nav-blue fixed-top">
+                  <nav class="lt">
+                      <ul class="list">
+                          <li><a href="#">Home</a></li> 
+                          <li><a href="#">About</a></li>
+                          <li><a href="#">Contact</a></li>     
+                      </ul>
+                      <div class="bars">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                      </div>
+                  </nav>
+                  <div class="brand">Bogosla</div>
+              </header>
+              
+              <div class="infos">
+                  <img class="img" src="static/james.jpg" alt="The developper">
+                  
+                  <div class="text">
+                      <h1 class="name">James DESTINE</h1>
+                      <h4>Web Developper</h4>
+                      <p><em>HTML/CSS</em> - <em>JAVASCRIPT</em> - <em>PYTHON</em></p>
+                  </div>
+              </div>
+          </div>
+          <section class="about">
+              <h3>About me</h3>
+              <p>Like a lot, the activity programming</p>
+              <a class="btn btn-green">Whatsapp</a>
+          </section>
+  
+          <section class="stuffs">
+              <h3>Some of my stuff</h3>
+              <div class="stuff">
+                 <a href="jexchange.herokuapp.com"><img src="static/two.jpg" alt=""></a>
+                 <img src="static/one.jpg" alt="project 2">
+                 <img src="static/haiti.jpg" alt="project 3">
+              </div>
+          </section>
+          <section class="contact">
+              <form method="post">
+                  <caption>Send me a message</caption>
+                  <div class="group-form">
+                      <input class="input" id="name" name="name" type="text" placeholder="Your name"> 
+                  </div>
+                  <div class="group-form">
+                      <input class="input" id="email" name="email" type="email" placeholder="Your email"> 
+                  </div>
+                  <div class="group-form">
+                      <textarea class="input" id="msg" name="msg" placeholder="Message"></textarea> 
+                  </div>
+                  <div class="group-form">
+                      <button class="btn btn-pink" id="subm" type="submit">Submit</button>
+                  </div>
+                  <div id="check">name or email not valid !</div>
+              </form>
+          </section>
+          
+          <footer class="footer">
+              <h4>&copy;Created by Bogosla</h4>
+          </footer>
+          <!--pop up-->
+          {% if sent %}
+              <div class="alert">
+                  <span class="alert-btn">&times;</span>
+                  <div class="alert-cont">message has been sent!</div>
+              </div>
+          {% endif %}
+      </div>
+      
+      <script src="{{ url_for('static', filename='js/bogosla.min.js') }}"></script>
+      <script src=" {{ url_for('static', filename='js/folio.js') }}"></script>
+   </body>
+</html>
